@@ -3,25 +3,25 @@ function playRound(playerSelection, computerSelection) {
   // your code here!
 
   if (playerSelection == computerSelection) {
-    return `You tied with ${playerSelection}`;
+    alert(`You tied with ${playerSelection}`);
   } else if (computerSelection == "Paper" && playerSelection == "Rock") {
-    return `You lost to ${computerSelection}`;
+    alert(`You lost to ${computerSelection}`);
   } else if (computerSelection == "Scissors" && playerSelection == "Rock") {
-    return `You won with ${playerSelection}`;
+    alert(`You won with ${playerSelection}`);
   } else if (playerSelection == computerSelection) {
-    return `You tied with ${playerSelection}`;
+    alert(`You tied with ${playerSelection}`);
   } else if (computerSelection == "Rock" && playerSelection == "Scissors") {
-    return `You lost to ${computerSelection}`;
+    alert(`You lost to ${computerSelection}`);
   } else if (computerSelection == "Paper" && playerSelection == "Scissors") {
-    return `You won to ${playerSelection}`;
+    alert(`You won to ${playerSelection}`);
   } else if (playerSelection == computerSelection) {
-    return `You tied with ${playerSelection}`;
+    alert(`You tied with ${playerSelection}`);
   } else if (computerSelection == "Scissors" && playerSelection == "Paper") {
-    return `You lost to ${computerSelection}`;
+    alert(`You lost to ${computerSelection}`);
   } else if (computerSelection == "Rock" && playerSelection == "Paper") {
-    return `You won with ${playerSelection}`;
+    alert(`You won with ${playerSelection}`);
   } else {
-    return `Invalid please try again you put ${playerSelection}`;
+    alert(`Invalid please try again you put ${playerSelection}`);
   }
 }
 
@@ -46,7 +46,7 @@ do {
 
   console.log(playRound(playerSelection, computerSelection));
 
-  let replay = prompt("Do you want to keep playing? y or n");
+  let replay = prompt(`Do you want to keep playing? y or n`);
   if (replay == "y") {
     i += 1;
   } else {
