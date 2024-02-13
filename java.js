@@ -1,25 +1,20 @@
 let i = 0;
 function playRound(playerSelection, computerSelection) {
   // your code here!
-
   if (playerSelection == computerSelection) {
     alert(`You tied with ${playerSelection}`);
-  } else if (computerSelection == "Paper" && playerSelection == "Rock") {
+  } else if (
+    (playerSelection == "Rock" && computerSelection == "Paper") ||
+    (playerSelection == "Scissors" && computerSelection == "Rock") ||
+    (playerSelection == "Paper" && computerSelection == "Scissors")
+  ) {
     alert(`You lost to ${computerSelection}`);
-  } else if (computerSelection == "Scissors" && playerSelection == "Rock") {
-    alert(`You won with ${playerSelection}`);
-  } else if (playerSelection == computerSelection) {
-    alert(`You tied with ${playerSelection}`);
-  } else if (computerSelection == "Rock" && playerSelection == "Scissors") {
-    alert(`You lost to ${computerSelection}`);
-  } else if (computerSelection == "Paper" && playerSelection == "Scissors") {
-    alert(`You won to ${playerSelection}`);
-  } else if (playerSelection == computerSelection) {
-    alert(`You tied with ${playerSelection}`);
-  } else if (computerSelection == "Scissors" && playerSelection == "Paper") {
-    alert(`You lost to ${computerSelection}`);
-  } else if (computerSelection == "Rock" && playerSelection == "Paper") {
-    alert(`You won with ${playerSelection}`);
+  } else if (
+    (playerSelection == "Rock" && computerSelection == "Scissors") ||
+    (playerSelection == "Scissors" && computerSelection == "Paper") ||
+    (playerSelection == "Paper" && computerSelection == "Rock")
+  ) {
+    alert(`You Won with ${playerSelection}`);
   } else {
     alert(`Invalid please try again you put ${playerSelection}`);
   }
